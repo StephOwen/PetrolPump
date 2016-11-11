@@ -19,7 +19,7 @@ namespace SelfServePetrol
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            if ((txtCardNo.Text == "") || (txtExp.Text == "") || (txtLimit.Text == "")) //|| (cboPetrol.SelectedIndex == 0))
+            if ((txtCardNo.Text == "") || (txtExp.Text == "") || (txtLimit.Text == "") || (cboPetrol.Text == ""))
             {
                 MessageBox.Show("Please ensure all fields are inputted.");
             }
@@ -28,6 +28,7 @@ namespace SelfServePetrol
                 txtCardNo.ReadOnly = true;
                 txtExp.ReadOnly = true;
                 txtLimit.ReadOnly = true;
+                cboPetrol.Enabled = false;
                 btnStop.Visible = true;
                 timer1.Enabled = true;
             }
@@ -36,12 +37,29 @@ namespace SelfServePetrol
         private void timer1_Tick(object sender, EventArgs e)
         {
             
-
                 int limit = int.Parse(txtLimit.Text);
  
                 int incLimit = int.Parse(lblLimit.Text);
                 int newValue = incLimit++;
                 lblLimit.Text = incLimit.ToString();
+
+                if (cboPetrol.Text == "Unleaded")
+                {
+                    double litres = double.Parse(lblLitres.Text);
+
+                    double newLitres = litres++;
+
+                    lblLitres.Text = litres.ToString();
+                }
+                else if (cboPetrol.Text == "Diesel")
+                {
+                    double litres = double.Parse(lblLitres.Text);
+
+                    double newLitres = (litres + 1.5);
+
+                    lblLitres.Text = newLitres.ToString();
+                }
+
                
                 if (newValue == limit)
                 {
@@ -49,6 +67,17 @@ namespace SelfServePetrol
                     timer1.Enabled = false;
                     btnStop.Visible = false;
                     btnFinish.Visible = true;
+                    
+                    if (cboPetrol.Text == "Unleaded")
+                    {
+                        lblLitres.Text = limit.ToString();
+                    }
+                    else if (cboPetrol.Text == "Diesel")
+                    {
+                        double dLitres = limit * 1.5;
+                        lblLitres.Text = dLitres.ToString();
+                    }
+
                 }
 
         }
@@ -74,6 +103,7 @@ namespace SelfServePetrol
             string limit = lblLimit.Text;
             btnFinish.Visible = false;
             label1.Visible = true;
+            btnContinue.Visible = false;
             lblFinished.Text = "£" + limit + " of petrol has been dispensed.";
         }
 
@@ -120,6 +150,8 @@ namespace SelfServePetrol
             txtCardNo.Text = "";
             txtLimit.Text = "";
             lblLimit.Text = "0";
+            cboPetrol.Enabled = true;
+            cboPetrol.Text = "";
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
