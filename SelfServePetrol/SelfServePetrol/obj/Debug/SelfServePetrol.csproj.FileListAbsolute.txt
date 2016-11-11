@@ -1,0 +1,9 @@
+H:\Applied Computing\Y3\Software Engineering\SelfServePetrol\SelfServePetrol\bin\Debug\SelfServePetrol.exe.config
+H:\Applied Computing\Y3\Software Engineering\SelfServePetrol\SelfServePetrol\bin\Debug\SelfServePetrol.exe
+H:\Applied Computing\Y3\Software Engineering\SelfServePetrol\SelfServePetrol\bin\Debug\SelfServePetrol.pdb
+H:\Applied Computing\Y3\Software Engineering\SelfServePetrol\SelfServePetrol\obj\Debug\SelfServePetrol.csprojResolveAssemblyReference.cache
+H:\Applied Computing\Y3\Software Engineering\SelfServePetrol\SelfServePetrol\obj\Debug\SelfServePetrol.frmSelfServe.resources
+H:\Applied Computing\Y3\Software Engineering\SelfServePetrol\SelfServePetrol\obj\Debug\SelfServePetrol.Properties.Resources.resources
+H:\Applied Computing\Y3\Software Engineering\SelfServePetrol\SelfServePetrol\obj\Debug\SelfServePetrol.csproj.GenerateResource.Cache
+H:\Applied Computing\Y3\Software Engineering\SelfServePetrol\SelfServePetrol\obj\Debug\SelfServePetrol.exe
+H:\Applied Computing\Y3\Software Engineering\SelfServePetrol\SelfServePetrol\obj\Debug\SelfServePetrol.pdb
